@@ -15,15 +15,19 @@ def main():
     player = Player(x, y)
 
     while 1:
+        dt = fps_clock.tick(60) / 1000
+
         log_state()
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+
         screen.fill("black")
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
-        dt = fps_clock.tick(60) / 1000
-
+        
     print("Starting Asteroids with pygame version: 2.6.1")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
