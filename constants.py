@@ -7,4 +7,9 @@ PLAYER_RADIUS = 20
 # Width fo the lines that draw the player's ship
 LINE_WIDTH = 2
 
+# Turn speed
 PLAYER_TURN_SPEED = 300
+
+# player speed
+PLAYER_SPEED = 200
+
